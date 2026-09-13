@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "STM32_mysymbol") (type "KiCad") (uri "C:/Users/Rafik/Documents/KiCad/SYMULACJE/STM32_mysymbol.kicad_sym") (options "") (descr ""))
+)
