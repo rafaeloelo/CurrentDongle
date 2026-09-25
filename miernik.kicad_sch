@@ -2607,24 +2607,26 @@
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 16.002 -7.366 0)
+			(property "Reference" "U5"
+				(at 17.78 -1.9049 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Value" "OLED SSD1306"
-				(at 6.858 -7.366 0)
+				(at 17.78 -4.4449 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Footprint" "SSD1306_Rafik:128x64OLED"
@@ -2672,7 +2674,7 @@
 						(type background)
 					)
 				)
-				(pin power_out line
+				(pin power_in line
 					(at 2.54 3.81 270)
 					(length 3.81)
 					(name "GND"
@@ -4220,6 +4222,12 @@
 		(uuid "12ded09c-3fb8-4d1f-9444-2b2446ecaab5")
 	)
 	(junction
+		(at 182.88 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "269c9a2a-0014-4b0e-a6eb-f2aeb1241076")
+	)
+	(junction
 		(at 81.28 163.83)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4236,12 +4244,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "31c615b2-502d-4f03-ad09-baa8002471c2")
-	)
-	(junction
-		(at 160.02 45.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3f42cc1d-d44d-47ca-838e-04d1a4e58cea")
 	)
 	(junction
 		(at 215.9 66.04)
@@ -4262,10 +4264,34 @@
 		(uuid "4f042f6e-651a-42f8-9b26-79a11ca069d4")
 	)
 	(junction
+		(at 162.56 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4ff63ab4-8550-4469-ae9b-1da117503967")
+	)
+	(junction
+		(at 160.02 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5def30b5-25cd-475a-92dc-246978a36ea5")
+	)
+	(junction
+		(at 144.78 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5f88bcae-33dd-4be1-99ac-55df49f1ea4c")
+	)
+	(junction
 		(at 157.48 34.29)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6858e14d-36e2-435e-97a3-2a116edfecd2")
+	)
+	(junction
+		(at 82.55 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6d534c4e-08ff-4660-8ecd-8eaaa95dde9b")
 	)
 	(junction
 		(at 59.69 66.04)
@@ -4334,12 +4360,6 @@
 		(uuid "97d87edb-3b53-44f7-bf7f-e2f7dd523579")
 	)
 	(junction
-		(at 182.88 45.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "99712c8e-9103-4a2a-87cb-6de6d69cdd0a")
-	)
-	(junction
 		(at 29.21 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4358,12 +4378,6 @@
 		(uuid "a129fd37-a41a-4b58-bc20-e92521dc5c9d")
 	)
 	(junction
-		(at 163.83 45.72)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a610e6fe-4941-44ec-a3fe-7729881be827")
-	)
-	(junction
 		(at 99.06 139.7)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4374,6 +4388,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aab44156-19b0-4429-876f-7ca45fa4534d")
+	)
+	(junction
+		(at 163.83 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "af0ab3a9-8f00-4474-bb79-143b964afdec")
 	)
 	(junction
 		(at 154.94 154.94)
@@ -4469,16 +4489,6 @@
 	)
 	(wire
 		(pts
-			(xy 179.07 45.72) (xy 182.88 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "013ca769-2d8e-4187-8352-d44fdc2133df")
-	)
-	(wire
-		(pts
 			(xy 88.9 163.83) (xy 88.9 160.02)
 		)
 		(stroke
@@ -4536,6 +4546,16 @@
 			(type default)
 		)
 		(uuid "0a60c792-bb3b-4d90-bb0a-0906c22a784a")
+	)
+	(wire
+		(pts
+			(xy 162.56 45.72) (xy 163.83 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c2f8de1-4f50-4cbd-8323-d2aed8615c74")
 	)
 	(wire
 		(pts
@@ -4979,7 +4999,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 69.85) (xy 85.09 69.85)
+			(xy 80.01 69.85) (xy 82.55 69.85)
 		)
 		(stroke
 			(width 0)
@@ -5249,6 +5269,26 @@
 	)
 	(wire
 		(pts
+			(xy 163.83 48.26) (xy 165.1 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74d2bff6-ccb8-4b46-9b78-f54810e8a3b3")
+	)
+	(wire
+		(pts
+			(xy 163.83 45.72) (xy 165.1 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75df420b-3f99-43e1-aa6a-db92004ad544")
+	)
+	(wire
+		(pts
 			(xy 264.16 102.87) (xy 266.7 102.87)
 		)
 		(stroke
@@ -5309,6 +5349,16 @@
 	)
 	(wire
 		(pts
+			(xy 82.55 71.12) (xy 82.55 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f77b8e0-8e13-4fc8-895b-41fdfbeb58e1")
+	)
+	(wire
+		(pts
 			(xy 160.02 53.34) (xy 160.02 55.88)
 		)
 		(stroke
@@ -5329,7 +5379,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 27.94) (xy 144.78 34.29)
+			(xy 144.78 27.94) (xy 144.78 30.48)
 		)
 		(stroke
 			(width 0)
@@ -5499,13 +5549,13 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 45.72) (xy 163.83 45.72)
+			(xy 144.78 30.48) (xy 144.78 34.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a5728068-44e4-47a7-b4f3-903db244f410")
+		(uuid "a6685a79-5ba8-471d-a5cf-d5a29dad9b3f")
 	)
 	(wire
 		(pts
@@ -5769,6 +5819,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 45.72) (xy 162.56 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "daf379a1-7588-493e-9792-a66ba4f23e5e")
+	)
+	(wire
+		(pts
 			(xy 109.22 31.75) (xy 111.76 31.75)
 		)
 		(stroke
@@ -5859,6 +5919,16 @@
 	)
 	(wire
 		(pts
+			(xy 82.55 69.85) (xy 85.09 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9f34d0e-6790-4d5d-8fec-ca4d4c88d5c4")
+	)
+	(wire
+		(pts
 			(xy 157.48 41.91) (xy 157.48 45.72)
 		)
 		(stroke
@@ -5906,6 +5976,16 @@
 			(type default)
 		)
 		(uuid "ee8a80ee-4cc0-43f4-9394-8ed165997552")
+	)
+	(wire
+		(pts
+			(xy 180.34 45.72) (xy 182.88 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0959240-e3d6-40c5-b7e3-a4ef940cd732")
 	)
 	(wire
 		(pts
@@ -6259,7 +6339,7 @@
 	)
 	(symbol
 		(lib_id "Regulator_Linear:AP2112K-3.3")
-		(at 171.45 48.26 0)
+		(at 172.72 48.26 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6270,7 +6350,7 @@
 		(fields_autoplaced yes)
 		(uuid "02ff5e65-7145-46af-960b-1998447bbfb1")
 		(property "Reference" "U3"
-			(at 171.45 39.37 0)
+			(at 172.72 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6280,7 +6360,7 @@
 			)
 		)
 		(property "Value" "AP2112K-3.3"
-			(at 171.45 41.91 0)
+			(at 172.72 41.91 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6290,7 +6370,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 171.45 40.005 0)
+			(at 172.72 40.005 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6301,7 +6381,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2112.pdf"
-			(at 171.45 45.72 0)
+			(at 172.72 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6312,7 +6392,7 @@
 			)
 		)
 		(property "Description" "600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5"
-			(at 171.45 48.26 0)
+			(at 172.72 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6814,6 +6894,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 82.55 71.12 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0aa89e6a-2ed1-489c-bf76-dd1e1fdb7066")
+		(property "Reference" "#FLG05"
+			(at 82.55 73.025 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 80.772 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm"
+			(at 82.55 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 82.55 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 82.55 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f1f6e258-46ce-4bf5-9dac-499af6f5a559")
+		)
+		(instances
+			(project "miernik"
+				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
+					(reference "#FLG05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Regulator_Switching:LMR51430")
 		(at 99.06 34.29 0)
 		(unit 1)
@@ -7240,7 +7398,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 171.45 55.88 0)
+		(at 172.72 55.88 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7251,7 +7409,7 @@
 		(fields_autoplaced yes)
 		(uuid "234c482f-0624-4b73-82e2-4def1af3d0ee")
 		(property "Reference" "#PWR048"
-			(at 171.45 62.23 0)
+			(at 172.72 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7262,7 +7420,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 171.45 60.96 0)
+			(at 172.72 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7273,7 +7431,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 171.45 55.88 0)
+			(at 172.72 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7284,7 +7442,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 171.45 55.88 0)
+			(at 172.72 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7295,7 +7453,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 171.45 55.88 0)
+			(at 172.72 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8009,6 +8167,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 162.56 45.72 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "41f19b19-99d0-4713-8e2a-b40df1d54f64")
+		(property "Reference" "#FLG06"
+			(at 162.56 43.815 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 162.56 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm"
+			(at 162.56 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 162.56 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1ebf9633-307e-4827-bac2-0ec01973e6f9")
+		)
+		(instances
+			(project "miernik"
+				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
+					(reference "#FLG06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 252.73 58.42 270)
 		(unit 1)
@@ -8571,6 +8808,85 @@
 			(project "miernik"
 				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
 					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 144.78 30.48 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4f4254bf-d9a0-47a7-948c-c8a9c75838ea")
+		(property "Reference" "#FLG04"
+			(at 146.685 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 148.59 30.4799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm"
+			(at 144.78 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 144.78 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 144.78 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8832b9f8-1700-40ab-b494-bea47dc5a417")
+		)
+		(instances
+			(project "miernik"
+				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
+					(reference "#FLG04")
 					(unit 1)
 				)
 			)
@@ -10870,7 +11186,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "https://www.tme.eu/pl/details/era6aeb1372v/rezystory-smd/panasonic/"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 135.128 48.26 90)
 			(hide yes)
 			(show_name no)
@@ -10881,7 +11197,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.tme.eu/pl/details/era6aeb1372v/rezystory-smd/panasonic/"
 			(at 133.35 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -11809,6 +12125,84 @@
 			(project "miernik"
 				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
 					(reference "#PWR042")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 67.31 31.75 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c2ad6144-a86c-45c3-8796-c91884585b0d")
+		(property "Reference" "#FLG03"
+			(at 67.31 33.655 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 67.31 36.83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm"
+			(at 67.31 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 67.31 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 67.31 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "95171d20-f9b7-40a5-a8a0-1d1c0b0c551f")
+		)
+		(instances
+			(project "miernik"
+				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
+					(reference "#FLG03")
 					(unit 1)
 				)
 			)
@@ -12886,7 +13280,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "https://www.tme.eu/pl/details/era6aeb2212v/rezystory-smd/panasonic/"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 130.048 63.5 90)
 			(hide yes)
 			(show_name no)
@@ -12897,7 +13291,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.tme.eu/pl/details/era6aeb2212v/rezystory-smd/panasonic/"
 			(at 128.27 63.5 0)
 			(hide yes)
 			(show_name no)
@@ -13700,10 +14094,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "fafac382-2533-4370-a814-d9f80643e532")
 		(property "Reference" "C9"
-			(at 163.83 48.2599 0)
+			(at 154.686 47.752 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13714,7 +14107,7 @@
 			)
 		)
 		(property "Value" "1u"
-			(at 163.83 50.7999 0)
+			(at 154.686 50.292 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
