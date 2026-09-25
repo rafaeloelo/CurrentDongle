@@ -2197,7 +2197,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Regulator_Linear:LM3480-3.3"
+		(symbol "Regulator_Linear:AP2112K-3.3"
 			(pin_names
 				(offset 0.254)
 			)
@@ -2207,17 +2207,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
-				(at -3.81 3.175 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "LM3480-3.3"
-				(at 0 3.175 0)
+				(at -5.08 5.715 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -2227,19 +2217,40 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(property "Value" "AP2112K-3.3"
 				(at 0 5.715 0)
 				(show_name no)
 				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+				(at 0 8.255 0)
+				(show_name no)
+				(do_not_autoplace no)
 				(hide yes)
 				(effects
 					(font
 						(size 1.27 1.27)
-						(italic yes)
 					)
 				)
 			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm3480.pdf"
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2112.pdf"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2250,7 +2261,7 @@
 					)
 				)
 			)
-			(property "Description" "100mA, Quasi Low Dropout Voltage Regulator, 3.3V positive fixed output, SOT-23 package"
+			(property "ki_keywords" "linear regulator ldo fixed positive"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2261,7 +2272,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "ldo linear fixed positive"
+			(property "ki_fp_filters" "SOT?23?5*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2272,20 +2283,9 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "SOT?23*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "LM3480-3.3_0_1"
+			(symbol "AP2112K-3.3_0_1"
 				(rectangle
-					(start -5.08 1.905)
+					(start -5.08 4.445)
 					(end 5.08 -5.08)
 					(stroke
 						(width 0.254)
@@ -2296,11 +2296,11 @@
 					)
 				)
 			)
-			(symbol "LM3480-3.3_1_1"
-				(pin power_out line
-					(at 7.62 0 180)
+			(symbol "AP2112K-3.3_1_1"
+				(pin power_in line
+					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "VO"
+					(name "VIN"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2308,24 +2308,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "VI"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2343,7 +2325,62 @@
 							)
 						)
 					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 5.08 0 180)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4138,6 +4175,16 @@
 		)
 		(uuid "0e69750f-147a-404e-917f-897f640969ff")
 	)
+	(text "this resistor is used to swap with resistor R10 to\nincrease the output voltage on switching converter to 5V"
+		(exclude_from_sim no)
+		(at 143.002 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "7b7dbfa9-9f4e-4eec-9016-c6fbb20f2077")
+	)
 	(text "Podpiąć SDA i SCL\n"
 		(exclude_from_sim no)
 		(at 135.636 163.576 0)
@@ -4147,16 +4194,6 @@
 			)
 		)
 		(uuid "949c909b-e22e-4f2c-81ae-0813d98eb1f3")
-	)
-	(text "tu ogarnac jakis stabilizator sensowny nie za drogi"
-		(exclude_from_sim no)
-		(at 253.492 38.862 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "c9f79436-779d-4498-bde8-28c7eee958fc")
 	)
 	(junction
 		(at 71.12 66.04)
@@ -4201,6 +4238,12 @@
 		(uuid "31c615b2-502d-4f03-ad09-baa8002471c2")
 	)
 	(junction
+		(at 160.02 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3f42cc1d-d44d-47ca-838e-04d1a4e58cea")
+	)
+	(junction
 		(at 215.9 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4237,10 +4280,16 @@
 		(uuid "72ed2cfe-2300-4651-adaa-a02aa7d58fcb")
 	)
 	(junction
-		(at 157.48 44.45)
+		(at 140.97 34.29)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "81264751-1744-4c1b-9561-b008751216ba")
+		(uuid "734a1d60-8f74-40a1-9b56-1a545e92425b")
+	)
+	(junction
+		(at 86.36 31.75)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "73717830-be12-4073-beeb-c90681fc303e")
 	)
 	(junction
 		(at 135.89 139.7)
@@ -4261,6 +4310,12 @@
 		(uuid "87a54f5b-347d-4383-8c4d-a3e3dc1ba4ff")
 	)
 	(junction
+		(at 182.88 34.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8a8d721d-6e3e-4c3a-abd7-b45d61660504")
+	)
+	(junction
 		(at 34.29 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4279,6 +4334,12 @@
 		(uuid "97d87edb-3b53-44f7-bf7f-e2f7dd523579")
 	)
 	(junction
+		(at 182.88 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "99712c8e-9103-4a2a-87cb-6de6d69cdd0a")
+	)
+	(junction
 		(at 29.21 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4291,6 +4352,18 @@
 		(uuid "9f4f2734-3954-4c52-8f20-bb161b246582")
 	)
 	(junction
+		(at 148.59 34.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a129fd37-a41a-4b58-bc20-e92521dc5c9d")
+	)
+	(junction
+		(at 163.83 45.72)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a610e6fe-4941-44ec-a3fe-7729881be827")
+	)
+	(junction
 		(at 99.06 139.7)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4301,12 +4374,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aab44156-19b0-4429-876f-7ca45fa4534d")
-	)
-	(junction
-		(at 186.69 34.29)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "b0f2d753-7dfe-4aa3-9613-fe4ef584e376")
 	)
 	(junction
 		(at 154.94 154.94)
@@ -4350,12 +4417,6 @@
 		(color 0 0 0 0)
 		(uuid "f50a5574-5676-40f3-a5ed-629731be48d6")
 	)
-	(junction
-		(at 186.69 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f6084183-1454-4d4e-b72c-72d59e71c277")
-	)
 	(no_connect
 		(at 241.3 97.79)
 		(uuid "092ac15d-71de-4da4-8224-67f6b1e6b603")
@@ -4367,6 +4428,10 @@
 	(no_connect
 		(at 190.5 95.25)
 		(uuid "85e55dec-c49d-4c8f-997b-039ae476f439")
+	)
+	(no_connect
+		(at 128.27 67.31)
+		(uuid "b23d820f-872c-490d-acdc-728b83b56219")
 	)
 	(no_connect
 		(at 241.3 95.25)
@@ -4385,6 +4450,10 @@
 		(uuid "c8e037fa-5aab-4bdf-9ea1-ad4aa3da34bb")
 	)
 	(no_connect
+		(at 128.27 59.69)
+		(uuid "d7430f5d-6cae-4a5a-842b-6451db35672f")
+	)
+	(no_connect
 		(at 241.3 105.41)
 		(uuid "ef1ea900-6c5f-4b74-8099-7c4f55f59704")
 	)
@@ -4397,6 +4466,16 @@
 			(type default)
 		)
 		(uuid "0046e9d2-2408-48ce-a670-d768f6b7d813")
+	)
+	(wire
+		(pts
+			(xy 179.07 45.72) (xy 182.88 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "013ca769-2d8e-4187-8352-d44fdc2133df")
 	)
 	(wire
 		(pts
@@ -4437,6 +4516,16 @@
 			(type default)
 		)
 		(uuid "07a254b0-5f8f-431f-95f9-aaa875851509")
+	)
+	(wire
+		(pts
+			(xy 148.59 41.91) (xy 148.59 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "093e051b-a4f2-44f1-a557-edf607af057e")
 	)
 	(wire
 		(pts
@@ -4560,16 +4649,6 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 44.45) (xy 165.1 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1e0981f9-362e-448d-bcc2-90eb6f8ac3b2")
-	)
-	(wire
-		(pts
 			(xy 151.13 100.33) (xy 154.94 100.33)
 		)
 		(stroke
@@ -4610,7 +4689,17 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 34.29) (xy 144.78 34.29)
+			(xy 182.88 34.29) (xy 182.88 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23b0b7b8-a701-44db-b571-cedc05e8fff9")
+	)
+	(wire
+		(pts
+			(xy 133.35 34.29) (xy 140.97 34.29)
 		)
 		(stroke
 			(width 0)
@@ -4730,16 +4819,6 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 44.45) (xy 186.69 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "331d016e-b169-4513-9b56-6c6c2b2aeb32")
-	)
-	(wire
-		(pts
 			(xy 64.77 77.47) (xy 85.09 77.47)
 		)
 		(stroke
@@ -4747,16 +4826,6 @@
 			(type default)
 		)
 		(uuid "33489f9b-f368-4426-aa17-acde24de17eb")
-	)
-	(wire
-		(pts
-			(xy 204.47 66.04) (xy 208.28 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3477c995-1adc-4755-8769-082afc432b05")
 	)
 	(wire
 		(pts
@@ -4777,6 +4846,16 @@
 			(type default)
 		)
 		(uuid "34a61315-6ceb-4fa5-8256-63297f8bbd60")
+	)
+	(wire
+		(pts
+			(xy 182.88 53.34) (xy 182.88 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "35e3303d-9d9a-49dd-8fdf-0feccaa8b7ef")
 	)
 	(wire
 		(pts
@@ -4890,6 +4969,16 @@
 	)
 	(wire
 		(pts
+			(xy 140.97 34.29) (xy 144.78 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a0f0fd8-7f64-408d-b98f-29caa929b25c")
+	)
+	(wire
+		(pts
 			(xy 80.01 69.85) (xy 85.09 69.85)
 		)
 		(stroke
@@ -4897,16 +4986,6 @@
 			(type default)
 		)
 		(uuid "4d86e1a1-72a7-433c-9379-ebbbef91f587")
-	)
-	(wire
-		(pts
-			(xy 157.48 52.07) (xy 157.48 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4e1cf9ea-adcd-474d-9bf3-55df4eea1de3")
 	)
 	(wire
 		(pts
@@ -4940,17 +5019,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 41.91) (xy 157.48 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "55530e00-c4f9-4efa-9441-1f97519a9b6a")
-	)
-	(wire
-		(pts
-			(xy 87.63 31.75) (xy 77.47 31.75)
+			(xy 87.63 31.75) (xy 86.36 31.75)
 		)
 		(stroke
 			(width 0)
@@ -5050,6 +5119,16 @@
 	)
 	(wire
 		(pts
+			(xy 140.97 41.91) (xy 140.97 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "629c3e11-a7ce-49c3-b735-6a5102daea9d")
+	)
+	(wire
+		(pts
 			(xy 135.89 139.7) (xy 148.59 139.7)
 		)
 		(stroke
@@ -5117,16 +5196,6 @@
 			(type default)
 		)
 		(uuid "6ac53762-9dd0-4669-a20c-674e757ed297")
-	)
-	(wire
-		(pts
-			(xy 186.69 34.29) (xy 186.69 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6be824c2-2a5c-4265-90c1-3ca287e419b0")
 	)
 	(wire
 		(pts
@@ -5210,7 +5279,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 34.29) (xy 157.48 34.29)
+			(xy 144.78 34.29) (xy 148.59 34.29)
 		)
 		(stroke
 			(width 0)
@@ -5240,13 +5309,13 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 34.29) (xy 186.69 34.29)
+			(xy 160.02 53.34) (xy 160.02 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "824424e9-76db-4bad-b72e-241de26e0942")
+		(uuid "7f808778-43d6-4b54-9b35-f404b7c91a0c")
 	)
 	(wire
 		(pts
@@ -5290,6 +5359,16 @@
 	)
 	(wire
 		(pts
+			(xy 203.2 66.04) (xy 208.28 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87b569f6-858a-4665-bd73-ad27c8a10f8c")
+	)
+	(wire
+		(pts
 			(xy 109.22 147.32) (xy 113.03 147.32)
 		)
 		(stroke
@@ -5300,7 +5379,7 @@
 	)
 	(wire
 		(pts
-			(xy 133.35 52.07) (xy 133.35 54.61)
+			(xy 133.35 52.07) (xy 133.35 55.88)
 		)
 		(stroke
 			(width 0)
@@ -5350,6 +5429,16 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 24.13) (xy 86.36 21.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c3edc25-98da-4655-a717-7fe8b585a0fb")
+	)
+	(wire
+		(pts
 			(xy 109.22 120.65) (xy 109.22 55.88)
 		)
 		(stroke
@@ -5367,6 +5456,16 @@
 			(type default)
 		)
 		(uuid "9edbdd80-ff1f-438c-8ee0-bd1732c13b91")
+	)
+	(wire
+		(pts
+			(xy 163.83 45.72) (xy 163.83 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a247c3c2-eebe-408c-a4e3-2a3bc5aef585")
 	)
 	(wire
 		(pts
@@ -5397,6 +5496,16 @@
 			(type default)
 		)
 		(uuid "a50f1c75-2467-4e6b-9092-f349ae652f67")
+	)
+	(wire
+		(pts
+			(xy 160.02 45.72) (xy 163.83 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5728068-44e4-47a7-b4f3-903db244f410")
 	)
 	(wire
 		(pts
@@ -5570,7 +5679,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 34.29) (xy 215.9 34.29)
+			(xy 175.26 34.29) (xy 182.88 34.29)
 		)
 		(stroke
 			(width 0)
@@ -5630,6 +5739,16 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 34.29) (xy 215.9 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d91fc18f-30cc-429f-9c97-c0849b9dc7ba")
+	)
+	(wire
+		(pts
 			(xy 52.07 77.47) (xy 52.07 73.66)
 		)
 		(stroke
@@ -5640,16 +5759,6 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 41.91) (xy 144.78 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d9c2b36a-e283-440b-8124-ecd60fefdbd6")
-	)
-	(wire
-		(pts
 			(xy 267.97 107.95) (xy 267.97 157.48)
 		)
 		(stroke
@@ -5657,16 +5766,6 @@
 			(type default)
 		)
 		(uuid "daadd24f-93b0-4db4-96ca-62df41e4bdd5")
-	)
-	(wire
-		(pts
-			(xy 186.69 52.07) (xy 186.69 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "db096989-712f-4174-bb89-025c42f155d8")
 	)
 	(wire
 		(pts
@@ -5690,13 +5789,13 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 52.07) (xy 172.72 57.15)
+			(xy 148.59 34.29) (xy 157.48 34.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "dfbd8d86-90e4-46ff-a376-77b22a715ddc")
+		(uuid "df48a412-e073-4ffe-ae43-a427337e76c1")
 	)
 	(wire
 		(pts
@@ -5757,6 +5856,16 @@
 			(type default)
 		)
 		(uuid "e9d10fd1-3d38-4865-aebf-915050d89d98")
+	)
+	(wire
+		(pts
+			(xy 157.48 41.91) (xy 157.48 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb9a89d7-957b-4dad-af03-019f20ff9e97")
 	)
 	(wire
 		(pts
@@ -5880,6 +5989,16 @@
 	)
 	(wire
 		(pts
+			(xy 157.48 45.72) (xy 160.02 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa0226bc-cddb-4f54-a853-e4d26eef04d4")
+	)
+	(wire
+		(pts
 			(xy 215.9 123.19) (xy 215.9 127)
 		)
 		(stroke
@@ -5887,6 +6006,16 @@
 			(type default)
 		)
 		(uuid "faef3e30-4770-481d-9179-5348858d60a2")
+	)
+	(wire
+		(pts
+			(xy 86.36 31.75) (xy 77.47 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb178985-7456-434f-af3e-0ce9ef9cd746")
 	)
 	(wire
 		(pts
@@ -6129,6 +6258,95 @@
 		(uuid "ea1c16cd-6628-4c08-9492-b100bf6672e8")
 	)
 	(symbol
+		(lib_id "Regulator_Linear:AP2112K-3.3")
+		(at 171.45 48.26 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "02ff5e65-7145-46af-960b-1998447bbfb1")
+		(property "Reference" "U3"
+			(at 171.45 39.37 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AP2112K-3.3"
+			(at 171.45 41.91 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at 171.45 40.005 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2112.pdf"
+			(at 171.45 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5"
+			(at 171.45 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "2f521060-edf3-4640-b742-dd9a64358719")
+		)
+		(pin "3"
+			(uuid "0c92aa0b-4fef-4dca-b2a7-4bb2757bc088")
+		)
+		(pin "1"
+			(uuid "ba893752-38dc-4907-9b26-0d5573b39b0b")
+		)
+		(pin "4"
+			(uuid "4baf7800-2040-4c0a-b8bd-4ed58bc2f722")
+		)
+		(pin "5"
+			(uuid "1504d4b1-8c7f-450e-ae50-2814281a521c")
+		)
+		(instances
+			(project "miernik"
+				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "STM32_mysymbol:STM32G030F6P6")
 		(at 215.9 100.33 0)
 		(unit 1)
@@ -6271,6 +6489,85 @@
 			(project "miernik"
 				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
 					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 160.02 55.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "04bb07f8-d7c1-4f77-9d2b-4bd0e3ce128d")
+		(property "Reference" "#PWR046"
+			(at 160.02 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 160.02 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 160.02 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bc0bd005-c0d2-4e45-a68f-e780d735041d")
+		)
+		(instances
+			(project "miernik"
+				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
+					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -6560,7 +6857,7 @@
 				(justify left)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/lmr51430.pdf"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/lmr51430.pdf?ts=1728498129060&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FLMR51430%253FHQS%253Dds-SNVS124-LMR51430-feat-pf-en"
 			(at 100.33 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -6573,6 +6870,17 @@
 			)
 		)
 		(property "Description" "4.5-V to 36-V, 3-A synchronous buck converter with 40-µA IQ, SOT-23-6"
+			(at 99.06 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "sklep" "https://www.tme.eu/pl/details/lmr51430yddcr/regulatory-napiecia-uklady-dc-dc/texas-instruments/"
 			(at 99.06 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -6690,6 +6998,87 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 140.97 38.1 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0f7694fc-7d3e-40ad-8423-8cc6e8a74dcd")
+		(property "Reference" "C14"
+			(at 139.446 48.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 139.446 50.8 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 141.9352 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/pl/details/cl21a106kaynnne/kondensatory-mlcc-smd/samsung/"
+			(at 140.97 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor/ X5R"
+			(at 140.97 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e1726e5b-52d6-4383-8db1-1dd589ab10ee")
+		)
+		(pin "1"
+			(uuid "852c8542-5723-457a-881b-9cb6ec18f416")
+		)
+		(instances
+			(project "miernik"
+				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
+					(reference "C14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 171.45 34.29 90)
 		(unit 1)
@@ -6791,7 +7180,7 @@
 				)
 			)
 		)
-		(property "Value" "TBD"
+		(property "Value" "2u2"
 			(at 127 31.75 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6812,7 +7201,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.tme.eu/pl/details/dfe21ccn2r2mell/dlawiki/murata/"
 			(at 127 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -6844,6 +7233,85 @@
 			(project "miernik"
 				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
 					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 171.45 55.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "234c482f-0624-4b73-82e2-4def1af3d0ee")
+		(property "Reference" "#PWR048"
+			(at 171.45 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 171.45 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 171.45 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 171.45 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 171.45 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6b0b97aa-a6b0-4ab4-9b92-e319650ea2ae")
+		)
+		(instances
+			(project "miernik"
+				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
+					(reference "#PWR048")
 					(unit 1)
 				)
 			)
@@ -7008,7 +7476,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 204.47 66.04 270)
+		(at 203.2 66.04 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7019,7 +7487,7 @@
 		(fields_autoplaced yes)
 		(uuid "26858e7d-4d8a-4203-914e-9a1cd616d89f")
 		(property "Reference" "#PWR04"
-			(at 198.12 66.04 0)
+			(at 196.85 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7030,7 +7498,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 199.39 66.04 0)
+			(at 198.12 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7041,7 +7509,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 204.47 66.04 0)
+			(at 203.2 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7052,7 +7520,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 204.47 66.04 0)
+			(at 203.2 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7063,7 +7531,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 204.47 66.04 0)
+			(at 203.2 66.04 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7080,85 +7548,6 @@
 			(project "miernik"
 				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
 					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 157.48 57.15 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "26e7809c-db46-4180-8bf1-f2ae417de74a")
-		(property "Reference" "#PWR015"
-			(at 157.48 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 157.48 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 157.48 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 157.48 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 157.48 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6d88d2b6-0c11-49f2-969f-c76be2996076")
-		)
-		(instances
-			(project "miernik"
-				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
-					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -7468,7 +7857,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TBD"
+		(property "Value" "10u"
 			(at 81.28 39.3699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7490,7 +7879,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.tme.eu/pl/details/cl21b104kbcnnnc/kondensatory-mlcc-smd/samsung/"
+		(property "Datasheet" "https://www.tme.eu/pl/details/cl21a106kaynnne/kondensatory-mlcc-smd/samsung/"
 			(at 77.47 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -7522,88 +7911,6 @@
 			(project "miernik"
 				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
 					(reference "C13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 186.69 48.26 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3ac3b6ae-ceb9-4526-8e3b-f265232c9b46")
-		(property "Reference" "C9"
-			(at 190.5 46.9899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1u"
-			(at 190.5 49.5299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 187.6552 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.tme.eu/pl/details/cl21b105kbfvpje/kondensatory-mlcc-smd/samsung/"
-			(at 186.69 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor/ X5R"
-			(at 186.69 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "d907c1d9-808e-439c-be71-873c2f78ee9a")
-		)
-		(pin "1"
-			(uuid "7560f2ce-f3e3-44fe-a62f-cb0372ccfad7")
-		)
-		(instances
-			(project "miernik"
-				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
-					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -8270,88 +8577,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 157.48 48.26 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "53425e8e-670b-4607-9db0-891091994fbc")
-		(property "Reference" "C10"
-			(at 161.29 46.9899 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1u"
-			(at 161.29 49.5299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 158.4452 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.tme.eu/pl/details/cl21b105kbfvpje/kondensatory-mlcc-smd/samsung/"
-			(at 157.48 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor/ X5R"
-			(at 157.48 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "52786930-392d-4b28-bd94-1d509b1f7b0c")
-		)
-		(pin "1"
-			(uuid "ffc4f50e-9355-4375-acef-bd0d40560239")
-		)
-		(instances
-			(project "miernik"
-				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
-					(reference "C10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 157.48 38.1 180)
 		(unit 1)
@@ -8593,7 +8818,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 133.35 54.61 0)
+		(at 133.35 55.88 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8604,7 +8829,7 @@
 		(fields_autoplaced yes)
 		(uuid "5dc7b3fc-772a-48b6-8eb4-dd415ae7d34f")
 		(property "Reference" "#PWR041"
-			(at 133.35 60.96 0)
+			(at 133.35 62.23 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8615,7 +8840,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 133.35 59.69 0)
+			(at 133.35 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8626,7 +8851,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 54.61 0)
+			(at 133.35 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8637,7 +8862,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 133.35 54.61 0)
+			(at 133.35 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8648,7 +8873,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 133.35 54.61 0)
+			(at 133.35 55.88 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8904,6 +9129,88 @@
 			(project "miernik"
 				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
 					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 86.36 27.94 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "666c6bed-9395-486c-aca5-f4a4b1991db6")
+		(property "Reference" "C16"
+			(at 82.55 29.2101 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 82.55 26.6701 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 85.3948 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/pl/details/cl21b104kbcnnnc/kondensatory-mlcc-smd/samsung/"
+			(at 86.36 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor/ X5R"
+			(at 86.36 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "51c3610e-ea65-4ea2-8773-06fcf92c1d3c")
+		)
+		(pin "1"
+			(uuid "59d04978-59c1-4217-976a-b2311a6cbdee")
+		)
+		(instances
+			(project "miernik"
+				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
+					(reference "C16")
 					(unit 1)
 				)
 			)
@@ -9218,6 +9525,85 @@
 			(project "miernik"
 				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
 					(reference "MH3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 86.36 21.59 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "71815db0-9ed8-446e-b9ba-1f7d00784d07")
+		(property "Reference" "#PWR044"
+			(at 86.36 15.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 86.36 16.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 21.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 21.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 86.36 21.59 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c816850e-c878-4186-a0ed-3e971b884428")
+		)
+		(instances
+			(project "miernik"
+				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
+					(reference "#PWR044")
 					(unit 1)
 				)
 			)
@@ -9568,88 +9954,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 144.78 38.1 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "760241ca-6610-4285-9ac1-2997d509588c")
-		(property "Reference" "C15"
-			(at 148.59 36.8299 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "TBD"
-			(at 148.59 39.3699 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 143.8148 34.29 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.tme.eu/pl/details/cl21b104kbcnnnc/kondensatory-mlcc-smd/samsung/"
-			(at 144.78 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor/ X5R"
-			(at 144.78 38.1 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "60a8fd30-af2e-42a8-8091-62c8ef2bc26d")
-		)
-		(pin "1"
-			(uuid "f5e57b25-6d90-4306-a6a8-01bc23dca401")
-		)
-		(instances
-			(project "miernik"
-				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
-					(reference "C15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 135.89 147.32 180)
 		(unit 1)
@@ -9884,86 +10188,6 @@
 			(project "miernik"
 				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
 					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 115.57 31.75 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7d85ebcc-dadc-447c-b53f-6463bd2959e2")
-		(property "Reference" "C14"
-			(at 115.57 24.13 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TBD"
-			(at 115.57 26.67 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 119.38 30.7848 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.tme.eu/pl/details/cl21b104kbcnnnc/kondensatory-mlcc-smd/samsung/"
-			(at 115.57 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor/ X5R"
-			(at 115.57 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "6bc1382a-03d3-489a-992d-e23d125b80e9")
-		)
-		(pin "1"
-			(uuid "8b4e6f39-5d47-475d-9ca6-4bff12ac1c00")
-		)
-		(instances
-			(project "miernik"
-				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
-					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -10457,6 +10681,85 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 182.88 55.88 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8ec010fe-0d67-4660-9dd2-e253484b7981")
+		(property "Reference" "#PWR047"
+			(at 182.88 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 182.88 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 182.88 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e38f08db-e372-4fc8-9526-62b7cc95624a")
+		)
+		(instances
+			(project "miernik"
+				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
+					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 154.94 85.09 270)
 		(unit 1)
 		(body_style 1)
@@ -10544,10 +10847,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "990fa482-232a-4c69-bf9f-79365e9af8bd")
 		(property "Reference" "R10"
-			(at 135.89 46.9899 0)
+			(at 128.016 46.99 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10557,8 +10859,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "TBD"
-			(at 135.89 49.5299 0)
+		(property "Value" "13k7"
+			(at 128.016 49.53 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10568,7 +10870,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(property "Footprint" "https://www.tme.eu/pl/details/era6aeb1372v/rezystory-smd/panasonic/"
 			(at 135.128 48.26 90)
 			(hide yes)
 			(show_name no)
@@ -10696,8 +10998,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 144.78 44.45 0)
+		(lib_id "Device:C")
+		(at 182.88 49.53 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10706,9 +11008,31 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "9c7046c9-fe83-4534-a102-587373bb7fc0")
-		(property "Reference" "#PWR042"
-			(at 144.78 50.8 0)
+		(uuid "9d3e82be-f124-4c3a-a9a3-39fb19f45771")
+		(property "Reference" "C10"
+			(at 186.69 48.2599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 186.69 50.7999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 183.8452 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10718,8 +11042,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 144.78 49.53 0)
+		(property "Datasheet" "https://www.tme.eu/pl/details/cl21b105kbfvpje/kondensatory-mlcc-smd/samsung/"
+			(at 182.88 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10729,8 +11053,8 @@
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 144.78 44.45 0)
+		(property "Description" "Unpolarized capacitor/ X5R"
+			(at 182.88 49.53 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10740,35 +11064,16 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
-			(at 144.78 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 144.78 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
+		(pin "2"
+			(uuid "67986923-29bf-4f02-be96-fe69c1e93ff0")
 		)
 		(pin "1"
-			(uuid "07f669b4-386b-43d8-85e7-6a6c0ce6024a")
+			(uuid "e59da4bd-1ba1-4291-aa6c-c2f590bb67a5")
 		)
 		(instances
 			(project "miernik"
 				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
-					(reference "#PWR042")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -10848,85 +11153,6 @@
 			(project "miernik"
 				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
 					(reference "#PWR020")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 186.69 57.15 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a66794a7-7250-470f-90f6-f3c5a6becd85")
-		(property "Reference" "#PWR013"
-			(at 186.69 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 186.69 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 186.69 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 186.69 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 186.69 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b1c011ef-be04-4874-a7c3-e569476c9dfe")
-		)
-		(instances
-			(project "miernik"
-				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
-					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -11108,8 +11334,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:LM3480-3.3")
-		(at 172.72 44.45 0)
+		(lib_id "Device:C")
+		(at 115.57 31.75 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11118,9 +11344,9 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "adfaef7e-0f90-4d63-b103-4fa655d258d2")
-		(property "Reference" "U3"
-			(at 172.72 38.1 0)
+		(uuid "acc651df-ad94-415a-9268-87be8a46c039")
+		(property "Reference" "C17"
+			(at 115.57 24.13 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11129,8 +11355,8 @@
 				)
 			)
 		)
-		(property "Value" "LM3480-3.3"
-			(at 172.72 40.64 0)
+		(property "Value" "100n"
+			(at 115.57 26.67 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11139,20 +11365,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 172.72 38.735 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm3480.pdf"
-			(at 172.72 44.45 0)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 111.76 32.7152 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11162,8 +11376,19 @@
 				)
 			)
 		)
-		(property "Description" "100mA, Quasi Low Dropout Voltage Regulator, 3.3V positive fixed output, SOT-23 package"
-			(at 172.72 44.45 0)
+		(property "Datasheet" "https://www.tme.eu/pl/details/cl21b104kbcnnnc/kondensatory-mlcc-smd/samsung/"
+			(at 115.57 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor/ X5R"
+			(at 115.57 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11174,18 +11399,96 @@
 			)
 		)
 		(pin "2"
-			(uuid "d8b78609-c3c5-43e4-8a8e-4459e33657be")
+			(uuid "2bba5278-1642-4fb3-aa3b-0aaa951716a2")
 		)
 		(pin "1"
-			(uuid "fc05b4be-7e18-4128-89bf-90e5c596573f")
-		)
-		(pin "3"
-			(uuid "833ff048-ab8d-4b3d-bb55-30ce77c4adcf")
+			(uuid "c4146b0f-99ad-4e87-b7c1-8c4c0f7ac3c9")
 		)
 		(instances
 			(project "miernik"
 				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
-					(reference "U3")
+					(reference "C17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 148.59 38.1 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ad4ec3ae-ade6-4a40-8a2c-737202ca1945")
+		(property "Reference" "C15"
+			(at 147.32 48.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 147.32 50.8 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 149.5552 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/pl/details/cl21a106kaynnne/kondensatory-mlcc-smd/samsung/"
+			(at 148.59 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor/ X5R"
+			(at 148.59 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6ce49992-abd8-4adb-b286-f9d19bbc1bdb")
+		)
+		(pin "1"
+			(uuid "c807533b-9e23-46b5-ada0-9921e33dac19")
+		)
+		(instances
+			(project "miernik"
+				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
+					(reference "C15")
 					(unit 1)
 				)
 			)
@@ -11427,6 +11730,85 @@
 			(project "miernik"
 				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
 					(reference "C12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 140.97 44.45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b3bd82c8-05ec-44bd-a85e-dc5e09ee6b4c")
+		(property "Reference" "#PWR042"
+			(at 140.97 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 140.97 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 140.97 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 140.97 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8985e719-db7d-48e8-99d9-ff977e1ccb91")
+		)
+		(instances
+			(project "miernik"
+				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
+					(reference "#PWR042")
 					(unit 1)
 				)
 			)
@@ -11683,10 +12065,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "c6795b55-4fbb-433f-9336-d70d909c2e02")
 		(property "Reference" "R9"
-			(at 135.89 36.8299 0)
+			(at 128.27 36.83 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11696,8 +12077,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "TBD"
-			(at 135.89 39.3699 0)
+		(property "Value" "100k"
+			(at 128.27 39.37 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11718,7 +12099,7 @@
 				)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://www.tme.eu/pl/details/arm05btcw1003a/rezystory-smd/viking/"
 			(at 133.35 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -12312,6 +12693,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 148.59 44.45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dc473cff-2518-4862-9c99-3cae515bd9b9")
+		(property "Reference" "#PWR045"
+			(at 148.59 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 148.59 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 148.59 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "48239f9f-2d50-4de0-8cfe-4cd05f6a3f22")
+		)
+		(instances
+			(project "miernik"
+				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
+					(reference "#PWR045")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 212.09 46.99 270)
 		(unit 1)
@@ -12388,6 +12848,87 @@
 			(project "miernik"
 				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 128.27 63.5 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim yes)
+		(in_bom yes)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e0d22bb5-b94a-49ae-825e-f9581419f123")
+		(property "Reference" "R13"
+			(at 121.666 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "22k1"
+			(at 121.666 64.77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "https://www.tme.eu/pl/details/era6aeb2212v/rezystory-smd/panasonic/"
+			(at 130.048 63.5 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 128.27 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 128.27 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "59fd63ab-4515-483a-9e1f-b5ba4b1e9eaa")
+		)
+		(pin "2"
+			(uuid "a92b7ad0-3612-430d-a7d6-2c787acb672c")
+		)
+		(instances
+			(project "miernik"
+				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -12707,85 +13248,6 @@
 			(project "miernik"
 				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
 					(reference "#PWR023")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 172.72 57.15 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ebee720e-3791-4a1b-9fc9-ab6095bedd59")
-		(property "Reference" "#PWR014"
-			(at 172.72 63.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 172.72 62.23 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 172.72 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 172.72 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 172.72 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c76d16d8-3f1e-4398-b629-0797d026d6b5")
-		)
-		(instances
-			(project "miernik"
-				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
-					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -13223,6 +13685,88 @@
 			(project "miernik"
 				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
 					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 160.02 49.53 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fafac382-2533-4370-a814-d9f80643e532")
+		(property "Reference" "C9"
+			(at 163.83 48.2599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1u"
+			(at 163.83 50.7999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 160.9852 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.tme.eu/pl/details/cl21b105kbfvpje/kondensatory-mlcc-smd/samsung/"
+			(at 160.02 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor/ X5R"
+			(at 160.02 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6f2ceecf-8e27-411f-8137-371a0c35fb17")
+		)
+		(pin "1"
+			(uuid "fa6ee71a-a4e0-47e6-8adb-927ab612a5fd")
+		)
+		(instances
+			(project "miernik"
+				(path "/0ebc09f4-25b3-4fbe-8655-cd6120321d51"
+					(reference "C9")
 					(unit 1)
 				)
 			)
