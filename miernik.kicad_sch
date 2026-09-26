@@ -4276,7 +4276,7 @@
 		(uuid "5def30b5-25cd-475a-92dc-246978a36ea5")
 	)
 	(junction
-		(at 144.78 30.48)
+		(at 153.67 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5f88bcae-33dd-4be1-99ac-55df49f1ea4c")
@@ -4366,7 +4366,7 @@
 		(uuid "9a1e5039-e4d3-41d8-bebb-b6fe41eb0bd5")
 	)
 	(junction
-		(at 144.78 34.29)
+		(at 153.67 34.29)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9f4f2734-3954-4c52-8f20-bb161b246582")
@@ -4989,7 +4989,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 34.29) (xy 144.78 34.29)
+			(xy 140.97 34.29) (xy 148.59 34.29)
 		)
 		(stroke
 			(width 0)
@@ -5319,16 +5319,6 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 34.29) (xy 148.59 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ab59880-1d84-4bc1-91b1-b97d1a21f40f")
-	)
-	(wire
-		(pts
 			(xy 138.43 100.33) (xy 138.43 90.17)
 		)
 		(stroke
@@ -5379,7 +5369,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 27.94) (xy 144.78 30.48)
+			(xy 153.67 27.94) (xy 153.67 30.48)
 		)
 		(stroke
 			(width 0)
@@ -5549,7 +5539,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 30.48) (xy 144.78 34.29)
+			(xy 153.67 30.48) (xy 153.67 34.29)
 		)
 		(stroke
 			(width 0)
@@ -6116,6 +6106,16 @@
 			(type default)
 		)
 		(uuid "fdb86675-3983-4447-b309-a52487505af7")
+	)
+	(label "LDO_Vin"
+		(at 157.48 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "05b06a0f-6201-4e6a-b04d-0f63b4f3acc9")
 	)
 	(label "I2C_SCL"
 		(at 267.97 156.21 0)
@@ -7348,7 +7348,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD_Wurth:L_Wurth_WE-LQSH-3012"
+		(property "Footprint" "Inductor_SMD:L_0805_2012Metric_Pad1.05x1.20mm_HandSolder"
 			(at 127 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -8815,7 +8815,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 144.78 30.48 270)
+		(at 153.67 30.48 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8826,7 +8826,7 @@
 		(fields_autoplaced yes)
 		(uuid "4f4254bf-d9a0-47a7-948c-c8a9c75838ea")
 		(property "Reference" "#FLG04"
-			(at 146.685 30.48 0)
+			(at 155.575 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8837,7 +8837,7 @@
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 148.59 30.4799 90)
+			(at 157.48 30.4799 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8848,7 +8848,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:TSSOP-28_4.4x9.7mm_P0.65mm"
-			(at 144.78 30.48 0)
+			(at 153.67 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8859,7 +8859,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 144.78 30.48 0)
+			(at 153.67 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8870,7 +8870,7 @@
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 144.78 30.48 0)
+			(at 153.67 30.48 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10511,7 +10511,7 @@
 	)
 	(symbol
 		(lib_id "power:VBUS")
-		(at 144.78 27.94 0)
+		(at 153.67 27.94 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10522,7 +10522,7 @@
 		(fields_autoplaced yes)
 		(uuid "7eca99ec-aa46-4952-a3d0-2765639374bb")
 		(property "Reference" "#PWR043"
-			(at 144.78 31.75 0)
+			(at 153.67 31.75 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10533,7 +10533,7 @@
 			)
 		)
 		(property "Value" "+BUCK_3V3"
-			(at 144.78 22.86 0)
+			(at 153.67 22.86 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10543,7 +10543,7 @@
 			)
 		)
 		(property "Footprint" "Package_QFP:TQFP-44_10x10mm_P0.8mm"
-			(at 144.78 27.94 0)
+			(at 153.67 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10554,7 +10554,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 144.78 27.94 0)
+			(at 153.67 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10565,7 +10565,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VBUS\""
-			(at 144.78 27.94 0)
+			(at 153.67 27.94 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10961,6 +10961,28 @@
 			)
 		)
 		(property "Description" "USB Type A connector"
+			(at 34.29 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "pcb mount" "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/480/48037/480372100_sd.pdf?inline"
+			(at 34.29 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "sklep" "https://www.tme.eu/pl/details/mx-48037-2100/zlacza-usb-i-ieee1394/molex/48037-2100/"
 			(at 34.29 71.12 0)
 			(hide yes)
 			(show_name no)
