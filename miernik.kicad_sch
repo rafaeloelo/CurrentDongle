@@ -9658,6 +9658,7 @@
 		(uuid "6e7d2c23-ac93-401f-91cf-554a39cb56ee")
 		(property "Reference" "MH3"
 			(at 41.91 180.3399 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10478,6 +10479,7 @@
 		(uuid "81516264-1880-4222-9cc0-448bd4fcbfd0")
 		(property "Reference" "MH2"
 			(at 33.02 180.3399 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12522,6 +12524,7 @@
 		(uuid "cef837dc-6e23-49ca-95ff-503e4f35569a")
 		(property "Reference" "MH4"
 			(at 50.8 180.3399 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -13162,6 +13165,7 @@
 		(uuid "e1ff9216-5825-40b3-9e54-87fc0479905f")
 		(property "Reference" "MH1"
 			(at 22.86 180.3399 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
