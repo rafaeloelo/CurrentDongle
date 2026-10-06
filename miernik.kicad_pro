@@ -40,8 +40,8 @@
         "other_text_upright": false,
         "pads": {
           "drill": 0.0,
-          "height": 1.4,
-          "width": 1.15
+          "height": 0.6,
+          "width": 1.325
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -81,7 +81,28 @@
           "width": 0.3
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "silk_edge_clearance|179000000|103660000|699fbb5b-c64f-4a07-9f4b-1b89a5784450|ecccdb23-b059-4a6b-9155-0e0a21123d7f",
+          ""
+        ],
+        [
+          "silk_edge_clearance|179000000|90340000|699fbb5b-c64f-4a07-9f4b-1b89a5784450|0b4f9ebd-9572-4d0c-a1a0-d90610f62c69",
+          ""
+        ],
+        [
+          "silk_over_copper|135173493|105472896|49f3b2f1-9857-4c8f-996f-e6adbbe56923|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_over_copper|137534671|105255000|5560ce30-2b51-44c2-b40e-c6564ced9a5d|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_over_copper|160766392|105255000|f7a086f6-f1a9-4bd2-bf7f-701ecbe96479|00000000-0000-0000-0000-000000000000",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
