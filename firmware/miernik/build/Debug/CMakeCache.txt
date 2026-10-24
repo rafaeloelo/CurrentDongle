@@ -228,8 +228,10 @@ CMAKE_STRIP:FILEPATH=C:/ST/STM32CubeCLT_1.22.0/GNU-tools-for-STM32/bin/arm-none-
 //Path to a program.
 CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 
-//The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/cmake/gcc-arm-none-eabi.cmake
+//Path to a CMake toolchain file, read early in the CMake run,
+// that specifies the compilers, toolchain utilities, and target-platform
+// information used when cross-compiling.
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/cmake/gcc-arm-none-eabi.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console

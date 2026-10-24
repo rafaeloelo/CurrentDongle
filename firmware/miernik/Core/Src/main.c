@@ -23,7 +23,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "i2c.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -44,7 +44,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+  uint8_t i2c_sensor_connected = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -55,6 +55,41 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+#define OLED_ADDR (0x3C << 1)
+
+//sending 1 bite of data command
+void OLED_Cmd(uint8_t cmd){
+  HAL_I2C_Mem_Write(&hi2c2, OLED_ADDR, 0x00, 1, &cmd, 1, 10);
+}
+
+//sending graphical data to OLED 
+void OLED_data(uint8_t *data, uint16_t size){
+  HAL_I2C_Mem_Write(&hi2c2, OLED_ADDR, 0x40, 1, data, size, 10);
+}
+
+//giving voltage to the matrix
+void OLED_start(void){
+  HAL_Delay(50);
+  OLED_Cmd(0x8D);
+  OLED_Cmd(0x14);
+  OLED_Cmd(0xAF);
+}
+
+
+void LED_Update(uint8_t is_connected){
+  static uint32_t last_toggle = 0;
+  uint32_t now = HAL_GetTick();
+  if (is_connected){
+    HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
+  } else{
+    if (now - last_toggle >= 100){
+      last_toggle = now;
+      HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+    }
+  }
+}
+
 
 /* USER CODE END 0 */
 
@@ -88,17 +123,34 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART2_UART_Init();
+  MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
+while (1)
   {
+    LED_Update(i2c_sensor_connected);
+
+    static uint32_t last_i2c_check = 0;
+    if (HAL_GetTick() - last_i2c_check >= 500)
+    {
+      last_i2c_check = HAL_GetTick();
+
+      if (HAL_I2C_IsDeviceReady(&hi2c2, (0x3C << 1), 2, 10) == HAL_OK)
+      {
+        i2c_sensor_connected = 1;
+      }
+      else
+      {
+        i2c_sensor_connected = 0;
+      }
+    }
     /* USER CODE END WHILE */
-    HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
-    HAL_Delay(500);
+
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
