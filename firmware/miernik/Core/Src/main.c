@@ -24,6 +24,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "i2c.h"
+#include "ssd1306.h"
+#include "ssd1306_fonts.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -56,25 +58,7 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
-#define OLED_ADDR (0x3C << 1)
 
-//sending 1 bite of data command
-void OLED_Cmd(uint8_t cmd){
-  HAL_I2C_Mem_Write(&hi2c2, OLED_ADDR, 0x00, 1, &cmd, 1, 10);
-}
-
-//sending graphical data to OLED 
-void OLED_data(uint8_t *data, uint16_t size){
-  HAL_I2C_Mem_Write(&hi2c2, OLED_ADDR, 0x40, 1, data, size, 10);
-}
-
-//giving voltage to the matrix
-void OLED_start(void){
-  HAL_Delay(50);
-  OLED_Cmd(0x8D);
-  OLED_Cmd(0x14);
-  OLED_Cmd(0xAF);
-}
 
 
 void LED_Update(uint8_t is_connected){
@@ -125,7 +109,12 @@ int main(void)
   MX_USART2_UART_Init();
   MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
+  ssd1306_Init();
 
+  ssd1306_Fill(Black);
+  ssd1306_SetCursor(10,20);
+  ssd1306_WriteString("DZIALA!", Font_11x18, White);
+  ssd1306_UpdateScreen();
   /* USER CODE END 2 */
 
   /* Infinite loop */

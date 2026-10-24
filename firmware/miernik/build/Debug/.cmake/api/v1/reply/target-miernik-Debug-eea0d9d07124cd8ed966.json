@@ -36,7 +36,7 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 87,
+				"line" : 89,
 				"parent" : 2
 			},
 			{
@@ -48,7 +48,7 @@
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 81,
+				"line" : 83,
 				"parent" : 2
 			}
 		]
@@ -134,7 +134,9 @@
 				4,
 				5,
 				6,
-				7
+				7,
+				9,
+				10
 			]
 		},
 		{
@@ -252,7 +254,9 @@
 				4,
 				5,
 				6,
-				7
+				7,
+				9,
+				10
 			]
 		},
 		{
@@ -266,8 +270,6 @@
 			"name" : "Object Libraries",
 			"sourceIndexes" : 
 			[
-				9,
-				10,
 				11,
 				12,
 				13,
@@ -283,7 +285,9 @@
 				23,
 				24,
 				25,
-				26
+				26,
+				27,
+				28
 			]
 		}
 	],
@@ -378,6 +382,26 @@
 			"compileGroupIndex" : 1,
 			"path" : "startup_stm32g030xx.s",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 5,
+			"backtraces" : 
+			[
+				5
+			],
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/ssd1306.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 5,
+			"backtraces" : 
+			[
+				5
+			],
+			"compileGroupIndex" : 0,
+			"path" : "Core/Src/ssd1306_fonts.c",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 3,
