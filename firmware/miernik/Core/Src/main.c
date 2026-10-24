@@ -46,7 +46,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-  uint8_t i2c_sensor_connected = 0;
+  uint8_t i2c_OLED_connected = 0;
+  uint8_t i2c_volt_sensor_connected = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -61,7 +62,7 @@ void SystemClock_Config(void);
 
 
 
-void LED_Update(uint8_t is_connected){
+void LED1_Update(uint8_t is_connected){
   static uint32_t last_toggle = 0;
   uint32_t now = HAL_GetTick();
   if (is_connected){
@@ -70,6 +71,19 @@ void LED_Update(uint8_t is_connected){
     if (now - last_toggle >= 100){
       last_toggle = now;
       HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+    }
+  }
+}
+
+void LED2_Update(uint8_t is_connected){
+  static uint32_t last_toggle = 0;
+  uint32_t now = HAL_GetTick();
+  if (is_connected){
+    HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
+  } else{
+    if (now - last_toggle >= 100){
+      last_toggle = now;
+      HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
     }
   }
 }
@@ -121,7 +135,8 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 while (1)
   {
-    LED_Update(i2c_sensor_connected);
+    LED1_Update(i2c_OLED_connected);
+    LED2_Update(i2c_volt_sensor_connected);
 
     static uint32_t last_i2c_check = 0;
     if (HAL_GetTick() - last_i2c_check >= 500)
@@ -130,12 +145,21 @@ while (1)
 
       if (HAL_I2C_IsDeviceReady(&hi2c2, (0x3C << 1), 2, 10) == HAL_OK)
       {
-        i2c_sensor_connected = 1;
+        i2c_OLED_connected = 1;
       }
       else
       {
-        i2c_sensor_connected = 0;
+        i2c_OLED_connected = 0;
       }
+      if (HAL_I2C_IsDeviceReady(&hi2c2, (0x40 << 1), 2, 10) == HAL_OK)
+      {
+        i2c_volt_sensor_connected = 1;
+      }
+      else
+      {
+        i2c_volt_sensor_connected = 0;
+      }
+      
     }
     /* USER CODE END WHILE */
 
