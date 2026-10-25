@@ -26,6 +26,7 @@
 #include "i2c.h"
 #include "ssd1306.h"
 #include "ssd1306_fonts.h"
+#include <stdio.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -59,6 +60,21 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+
+//read data from INA detector
+#define INA226_ADDR (0x40 << 1)
+#define INA226_REG_BUS_VOLT 0x02
+
+float INA226_ReadBusVoltage()
+{
+  uint8_t buf[2];
+  if (HAL_I2C_Mem_Read(&hi2c2,INA226_ADDR, INA226_REG_BUS_VOLT, 1, buf, 2, 20)==HAL_OK)
+  {
+    uint16_t raw = (buf[0] << 8) | buf[1];
+    return (float)raw * 0.00125f;
+  }
+  return 0.0f;
+}
 
 
 
@@ -160,6 +176,28 @@ while (1)
         i2c_volt_sensor_connected = 0;
       }
       
+    }
+
+    static uint32_t last_OLED_refresh = 0;
+    if (HAL_GetTick() - last_OLED_refresh >= 200)
+    {
+      last_OLED_refresh = HAL_GetTick();
+      if (i2c_volt_sensor_connected && i2c_OLED_connected)
+      {
+        float voltage = INA226_ReadBusVoltage();
+        char display_voltage[16];
+        uint16_t v_int = (uint16_t)voltage;
+        uint16_t v_dec = (uint16_t)((voltage - v_int) * 100);
+        snprintf(display_voltage, sizeof(display_voltage), "%d.%02d V", v_int, v_dec);
+
+        //display
+        ssd1306_Fill(Black);
+        ssd1306_SetCursor(0, 5);
+        ssd1306_WriteString("Voltage:", Font_7x10, White);
+        ssd1306_SetCursor(60, 5);
+        ssd1306_WriteString(display_voltage, Font_7x10, White);
+        ssd1306_UpdateScreen();
+      }
     }
     /* USER CODE END WHILE */
 
