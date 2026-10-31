@@ -82,12 +82,6 @@ HAL_StatusTypeDef INA226_WriteRegister(uint8_t reg, uint16_t value)
   return HAL_I2C_Mem_Write(&hi2c2, INA226_ADDR, reg, 1, buf, 2, 20);
 }
 
-void INA226_Init(void)
-{
-  uint16_t cal_value = 5120;
-  INA226_WriteRegister(INA226_REG_CALIB, cal_value);
-}
-
 
 float INA226_ReadBusVoltage()
 {
@@ -190,11 +184,15 @@ int main(void)
 
   ssd1306_Fill(Black);
   ssd1306_SetCursor(10,20);
-  ssd1306_WriteString("DZIALA!", Font_11x18, White);
+  ssd1306_WriteString("Hello!", Font_11x18, White);
   ssd1306_UpdateScreen();
+
+  HAL_Delay(2000);
 
   // inicialization of INA226
   INA226_WriteRegister(INA226_REG_CALIB, 5120); // value vor 0.01 Ohm
+
+  INA226_WriteRegister(INA226_REG_CONFIG, 0x4727);
 
   /* USER CODE END 2 */
 
@@ -277,6 +275,7 @@ while (1)
         ssd1306_UpdateScreen();
       }
     }
+    __WFI();
     /* USER CODE END WHILE */
 
 
