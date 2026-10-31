@@ -1,6 +1,10 @@
-C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/Core/Src/main.c:68:7:INA226_ReadBusVoltage	32	static
-C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/Core/Src/main.c:81:6:LED1_Update	24	static
-C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/Core/Src/main.c:94:6:LED2_Update	24	static
-C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/Core/Src/main.c:114:5:main	56	static
-C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/Core/Src/main.c:214:6:SystemClock_Config	88	static
-C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/Core/Src/main.c:258:6:Error_Handler	8	static,ignoring_inline_asm
+C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/Core/Src/main.c:77:19:INA226_WriteRegister	40	static
+C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/Core/Src/main.c:85:6:INA226_Init	16	static
+C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/Core/Src/main.c:92:7:INA226_ReadBusVoltage	32	static
+C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/Core/Src/main.c:103:7:INA226_ReadCurrent	32	static
+C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/Core/Src/main.c:114:7:INA226_ReadPower	32	static
+C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/Core/Src/main.c:128:6:LED1_Update	24	static
+C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/Core/Src/main.c:141:6:LED2_Update	24	static
+C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/Core/Src/main.c:161:5:main	104	static
+C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/Core/Src/main.c:292:6:SystemClock_Config	88	static
+C:/Users/Rafik/Documents/KiCad/SYMULACJE/CurrentDongle/firmware/miernik/Core/Src/main.c:336:6:Error_Handler	8	static,ignoring_inline_asm

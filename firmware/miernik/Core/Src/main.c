@@ -64,6 +64,30 @@ void SystemClock_Config(void);
 //read data from INA detector
 #define INA226_ADDR (0x40 << 1)
 #define INA226_REG_BUS_VOLT 0x02
+#define INA226_REG_CONFIG 0x00
+#define INA226_REG_POWER 0x03
+#define INA226_REG_CURRENT 0x04
+#define INA226_REG_CALIB 0x05
+
+
+#define INA226_CURRENT_LSB  0.0001f
+#define INA226_POWER_LSB    (25.0f * INA226_CURRENT_LSB)
+
+
+HAL_StatusTypeDef INA226_WriteRegister(uint8_t reg, uint16_t value)
+{
+  uint8_t buf[2];
+  buf[0] = (uint8_t)(value >> 8);
+  buf[1] = (uint8_t)(value & 0xFF);
+  return HAL_I2C_Mem_Write(&hi2c2, INA226_ADDR, reg, 1, buf, 2, 20);
+}
+
+void INA226_Init(void)
+{
+  uint16_t cal_value = 5120;
+  INA226_WriteRegister(INA226_REG_CALIB, cal_value);
+}
+
 
 float INA226_ReadBusVoltage()
 {
@@ -75,6 +99,29 @@ float INA226_ReadBusVoltage()
   }
   return 0.0f;
 }
+
+float INA226_ReadCurrent()
+{
+  uint8_t buf[2];
+  if (HAL_I2C_Mem_Read(&hi2c2,INA226_ADDR, INA226_REG_CURRENT, 1, buf, 2, 20)==HAL_OK)
+  {
+    int16_t raw = (int16_t)((buf[0] << 8) | buf[1]);
+    return (float)raw * INA226_CURRENT_LSB;
+  }
+  return 0.0f;
+}
+
+float INA226_ReadPower()
+{
+  uint8_t buf[2];
+  if (HAL_I2C_Mem_Read(&hi2c2,INA226_ADDR, INA226_REG_POWER, 1, buf, 2, 20)==HAL_OK)
+  {
+    uint16_t raw = (uint16_t)((buf[0] << 8) | buf[1]);
+    return (float)raw * INA226_POWER_LSB;
+  }
+  return 0.0f;
+}
+
 
 
 
@@ -145,6 +192,10 @@ int main(void)
   ssd1306_SetCursor(10,20);
   ssd1306_WriteString("DZIALA!", Font_11x18, White);
   ssd1306_UpdateScreen();
+
+  // inicialization of INA226
+  INA226_WriteRegister(INA226_REG_CALIB, 5120); // value vor 0.01 Ohm
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -185,10 +236,25 @@ while (1)
       if (i2c_volt_sensor_connected && i2c_OLED_connected)
       {
         float voltage = INA226_ReadBusVoltage();
+        float current = INA226_ReadCurrent();
+        float power = INA226_ReadPower();
+
+
         char display_voltage[16];
         uint16_t v_int = (uint16_t)voltage;
         uint16_t v_dec = (uint16_t)((voltage - v_int) * 100);
         snprintf(display_voltage, sizeof(display_voltage), "%d.%02d V", v_int, v_dec);
+
+
+        char display_current[16];
+        uint16_t curr_int = (uint16_t)current;
+        uint16_t curr_dec = (uint16_t)((current - curr_int) * 100);
+        snprintf(display_current, sizeof(display_current), "%d.%02d A", curr_int, curr_dec);
+
+        char display_power[16];
+        uint16_t power_int = (uint16_t)power;
+        uint16_t power_dec = (uint16_t)((power - power_int) * 100);
+        snprintf(display_power, sizeof(display_power), "%d.%02d W", power_int, power_dec);
 
         //display
         ssd1306_Fill(Black);
@@ -196,6 +262,18 @@ while (1)
         ssd1306_WriteString("Voltage:", Font_7x10, White);
         ssd1306_SetCursor(60, 5);
         ssd1306_WriteString(display_voltage, Font_7x10, White);
+
+        ssd1306_SetCursor(0, 20);
+        ssd1306_WriteString("Current:", Font_7x10, White);
+        ssd1306_SetCursor(60, 20);
+        ssd1306_WriteString(display_current, Font_7x10, White);
+
+        ssd1306_SetCursor(0, 35);
+        ssd1306_WriteString("Power:", Font_7x10, White);
+        ssd1306_SetCursor(60, 35);
+        ssd1306_WriteString(display_power, Font_7x10, White);
+
+
         ssd1306_UpdateScreen();
       }
     }
