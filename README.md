@@ -2,7 +2,8 @@
 
 A custom-designed, inline USB power, voltage, and current meter built from scratch—covering schematic capture, PCB layout in KiCad, hand-soldering assembly, and bare-metal C firmware development for the STM32G030 microcontroller.
 
-![Working Device](docs/images/working_oled.jpg)
+![Working Device]<img width="3008" height="4000" alt="power" src="https://github.com/user-attachments/assets/3050ac83-bd66-4253-883c-587a068c4582" />
+
 
 ---
 
