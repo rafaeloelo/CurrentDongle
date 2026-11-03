@@ -2,7 +2,8 @@
 
 A custom-designed, inline USB power, voltage, and current meter built from scratch—covering schematic capture, PCB layout in KiCad, hand-soldering assembly, and bare-metal C firmware development for the STM32G030 microcontroller.
 
-![Working Device](docs/images/working_oled.jpg)
+<img width="3008" height="4000" alt="power" src="https://github.com/user-attachments/assets/4082ea0b-b179-4c6a-a2f0-2c27cce8578e" />
+
 
 ---
 
@@ -49,24 +50,16 @@ This board was designed with manual assembly and ease of debugging in mind:
 ## Gallery
 
 ### KiCad Design & 3D Render
-| Top Routing (Front) | Bottom Routing (Back) | 3D PCB Render |
-| :---: | :---: | :---: |
-| ![KiCad Top](docs/images/kicad_top.jpg) | ![KiCad Bottom](docs/images/kicad_bottom.jpg) | ![KiCad 3D](docs/images/kicad_3d.jpg) |
+<img width="1111" height="517" alt="front_routing" src="https://github.com/user-attachments/assets/82c2ddd6-d86c-4f08-a2da-2e481a1e6bb4" />
 
-### Assembled Hardware & Live Operation
-| Assembled PCB (Top) | Assembled PCB (Bottom) | Live Measurement |
-| :---: | :---: | :---: |
-| ![PCB Top](docs/images/pcb_top.jpg) | ![PCB Bottom](docs/images/pcb_bottom.jpg) | ![Working OLED](docs/images/working_oled.jpg) |
+<img width="1105" height="507" alt="back_routing" src="https://github.com/user-attachments/assets/1b9abc8c-150a-4368-9747-65091e8daf9d" />
 
----
+<img width="1192" height="522" alt="3D_model" src="https://github.com/user-attachments/assets/2f409499-44f4-4ea0-a0c8-950e26cee9e7" />
 
-## Firmware Build Instructions
 
-The project uses a modern CMake and Ninja build system generated via STM32CubeMX.
+### Assembled Hardware 
+<img width="3008" height="4000" alt="front" src="https://github.com/user-attachments/assets/861b33ac-2e14-49c0-aaf3-81346e05d9b7" />
 
-```bash
-# 1. Configure the CMake build directory
-cmake -B build/Debug -G Ninja
+<img width="3008" height="4000" alt="back" src="https://github.com/user-attachments/assets/e66ab65d-1de0-4713-8b36-601215c87caf" />
 
-# 2. Compile and link the firmware
-cmake --build build/Debug
+
